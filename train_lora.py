@@ -47,6 +47,10 @@ from diffusers import (
     UNet2DConditionModel,
     DDIMScheduler,
 )
+
+from diffusers.loaders import AttnProcsLayers
+from diffusers.models.cross_attention import LoRACrossAttnProcessor
+
 from diffusers.optimization import get_scheduler
 from diffusers.utils import check_min_version
 from diffusers.utils.import_utils import is_xformers_available
@@ -93,7 +97,7 @@ def parse_args(input_args=None):
     parser.add_argument(
         "--pretrained_model_name_or_path",
         type=str,
-        default="stabilityai/stable-diffusion-2-1-base", # CompVis/stable-diffusion-v1-4        stabilityai/stable-diffusion-2-1-base
+        default="stabilityai/stable-diffusion-2-1-base",
         help="Path to pretrained model or model identifier from huggingface.co/models.",
     )
     parser.add_argument(
@@ -578,7 +582,7 @@ class DreamBoothDataset(Dataset):
         num_of_tokens = random.randrange(1, len(self.placeholder_tokens) + 1)
         tokens_ids_to_use = random.sample(
             range(len(self.placeholder_tokens)), k=num_of_tokens
-        )        
+        )
         tokens_to_use = [self.placeholder_tokens[tkn_i] for tkn_i in tokens_ids_to_use]
         prompt = "a photo of " + " and ".join(tokens_to_use)
 
@@ -1247,9 +1251,7 @@ class SpatialDreambooth:
                                 is_cross=True,
                                 select=batch_idx,
                             )
-                            
                             # curr_cond_batch_idx = self.args.train_batch_size + batch_idx
-                            
                             # 현재 배치 인덱스 계산
                             curr_cond_batch_idx = batch_idx
                             if curr_cond_batch_idx >= len(batch["input_ids"]):
@@ -1343,22 +1345,22 @@ class SpatialDreambooth:
                         img_logs_path = os.path.join(self.args.output_dir, "img_logs")
                         os.makedirs(img_logs_path, exist_ok=True)
 
-                        # if self.args.lambda_attention != 0:
-                        #     self.controller.cur_step = 1
-                        #     last_sentence = batch["input_ids"][curr_cond_batch_idx]
-                        #     last_sentence = last_sentence[
-                        #         (last_sentence != 0)
-                        #         & (last_sentence != 49406)
-                        #         & (last_sentence != 49407)
-                        #     ]
-                        #     last_sentence = self.tokenizer.decode(last_sentence)
-                        #     self.save_cross_attention_vis(
-                        #         last_sentence,
-                        #         attention_maps=agg_attn.detach().cpu(),
-                        #         path=os.path.join(
-                        #             img_logs_path, f"{global_step:05}_step_attn.jpg"
-                        #         ),
-                        #     )
+                        if self.args.lambda_attention != 0:
+                            self.controller.cur_step = 1
+                            last_sentence = batch["input_ids"][curr_cond_batch_idx]
+                            last_sentence = last_sentence[
+                                (last_sentence != 0)
+                                & (last_sentence != 49406)
+                                & (last_sentence != 49407)
+                            ]
+                            last_sentence = self.tokenizer.decode(last_sentence)
+                            self.save_cross_attention_vis(
+                                last_sentence,
+                                attention_maps=agg_attn.detach().cpu(),
+                                path=os.path.join(
+                                    img_logs_path, f"{global_step:05}_step_attn.jpg"
+                                ),
+                            )
                         self.controller.cur_step = 0
                         self.controller.attention_store = {}
 

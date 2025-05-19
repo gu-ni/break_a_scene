@@ -1,0 +1,122 @@
+{
+    "dog": {
+        "base": {
+            "CLIP_image_score_mean": 0.8381676852703095,
+            "CLIP_image_score_std": 0.012771872272915223,
+            "DINO_score_mean": 0.7690362513065339,
+            "DINO_score_std": 0.021539059691422446,
+            "CLIP_text_image_score_mean": 0.23786581307649612,
+            "CLIP_text_image_score_std": 0.019629505634129966
+        }
+    },
+    "dog2": {
+        "base": {
+            "CLIP_image_score_mean": 0.8729015350341797,
+            "CLIP_image_score_std": 0.036172251905573584,
+            "DINO_score_mean": 0.7844760835170745,
+            "DINO_score_std": 0.025704307487670514,
+            "CLIP_text_image_score_mean": 0.2183936282992363,
+            "CLIP_text_image_score_std": 0.030785543332886404
+        }
+    },
+    "dog5": {
+        "base": {
+            "CLIP_image_score_mean": 0.792721688747406,
+            "CLIP_image_score_std": 0.03846282219512443,
+            "DINO_score_mean": 0.6206282466650009,
+            "DINO_score_std": 0.12401365862765851,
+            "CLIP_text_image_score_mean": 0.19764780551195144,
+            "CLIP_text_image_score_std": 0.023698479164779098
+        }
+    },
+    "dog6": {
+        "base": {
+            "CLIP_image_score_mean": 0.8104296147823333,
+            "CLIP_image_score_std": 0.03878744651691287,
+            "DINO_score_mean": 0.7890590906143189,
+            "DINO_score_std": 0.042330397076954594,
+            "CLIP_text_image_score_mean": 0.22785588800907136,
+            "CLIP_text_image_score_std": 0.02047750908479914
+        }
+    },
+    "dog7": {
+        "base": {
+            "CLIP_image_score_mean": 0.8812188625335693,
+            "CLIP_image_score_std": 0.012952821892702714,
+            "DINO_score_mean": 0.8101343214511871,
+            "DINO_score_std": 0.023595961353101956,
+            "CLIP_text_image_score_mean": 0.20404229462146758,
+            "CLIP_text_image_score_std": 0.01604531806898872
+        }
+    },
+    "dog8": {
+        "base": {
+            "CLIP_image_score_mean": 0.9083398401737213,
+            "CLIP_image_score_std": 0.01886972039157752,
+            "DINO_score_mean": 0.8842145204544067,
+            "DINO_score_std": 0.02013053649258534,
+            "CLIP_text_image_score_mean": 0.19880546480417252,
+            "CLIP_text_image_score_std": 0.01612932957121914
+        }
+    },
+    "duck_toy": {
+        "base": {
+            "CLIP_image_score_mean": 0.8242118835449219,
+            "CLIP_image_score_std": 0.036944888044830204,
+            "DINO_score_mean": 0.5627699136734009,
+            "DINO_score_std": 0.059382932631054354,
+            "CLIP_text_image_score_mean": 0.1808340534567833,
+            "CLIP_text_image_score_std": 0.013418811652348829
+        }
+    },
+    "grey_sloth_plushie": {
+        "base": {
+            "CLIP_image_score_mean": 0.7876856565475464,
+            "CLIP_image_score_std": 0.03477868514559776,
+            "DINO_score_mean": 0.548343402147293,
+            "DINO_score_std": 0.027099107024360684,
+            "CLIP_text_image_score_mean": 0.18326680809259416,
+            "CLIP_text_image_score_std": 0.02291238200635283
+        }
+    },
+    "monster_toy": {
+        "base": {
+            "CLIP_image_score_mean": 0.6558653295040131,
+            "CLIP_image_score_std": 0.0222725801414719,
+            "DINO_score_mean": 0.42780921161174773,
+            "DINO_score_std": 0.03490763899899081,
+            "CLIP_text_image_score_mean": 0.20592087954282762,
+            "CLIP_text_image_score_std": 0.02027367486497252
+        }
+    },
+    "robot_toy": {
+        "base": {
+            "CLIP_image_score_mean": 0.9141743361949921,
+            "CLIP_image_score_std": 0.019500893512287613,
+            "DINO_score_mean": 0.7375023901462555,
+            "DINO_score_std": 0.01213767903538868,
+            "CLIP_text_image_score_mean": 0.17101099640130996,
+            "CLIP_text_image_score_std": 0.02678672515221168
+        }
+    },
+    "wolf_plushie": {
+        "base": {
+            "CLIP_image_score_mean": 0.7388537645339965,
+            "CLIP_image_score_std": 0.019011031335921316,
+            "DINO_score_mean": 0.634942352771759,
+            "DINO_score_std": 0.03381237545991103,
+            "CLIP_text_image_score_mean": 0.23008979260921478,
+            "CLIP_text_image_score_std": 0.023331478661836914
+        }
+    },
+    "cat2": {
+        "base": {
+            "CLIP_image_score_mean": 0.8788689315319062,
+            "CLIP_image_score_std": 0.027427890482754878,
+            "DINO_score_mean": 0.822665411233902,
+            "DINO_score_std": 0.016509235671985676,
+            "CLIP_text_image_score_mean": 0.21234588474035263,
+            "CLIP_text_image_score_std": 0.020970213158542347
+        }
+    }
+}

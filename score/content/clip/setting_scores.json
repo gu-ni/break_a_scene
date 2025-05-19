@@ -1,0 +1,10 @@
+{
+    "base": {
+        "CLIP_image_score_mean": 0.8252865940332412,
+        "CLIP_image_score_std": 0.07726881776081095,
+        "DINO_score_mean": 0.6992984329660733,
+        "DINO_score_std": 0.13996961864467614,
+        "CLIP_text_image_score_mean": 0.20567327576378983,
+        "CLIP_text_image_score_std": 0.029460500237252597
+    }
+}
